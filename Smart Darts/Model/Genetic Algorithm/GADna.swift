@@ -10,7 +10,7 @@ import Foundation
 
 class GADna {
     var genes: [GAVector2D] = []
-    static var dnaSize: Int = 400
+    static var dnaSize: Int = 200
     
     init() {
         for i in 0...GADna.dnaSize {
@@ -23,7 +23,7 @@ class GADna {
                 genes.append(GAVector2D(x: Double(arc4random_uniform(10)), y: -Double(arc4random_uniform(10))))
             }
 
-            self.genes[i].set(length: 1)
+            self.genes[i].set(length: 2.5)
         }
     }
     
@@ -50,7 +50,7 @@ class GADna {
                     self.genes[i] = GAVector2D(x: Double(arc4random_uniform(10)), y: -Double(arc4random_uniform(10)))
                 }
                 
-                self.genes[i].set(length: 1)
+                self.genes[i].set(length: 2.5)
             }
         }
     }

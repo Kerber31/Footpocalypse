@@ -17,6 +17,10 @@
 		2F89F03E20A8F960003D80A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F89F03C20A8F960003D80A8 /* LaunchScreen.storyboard */; };
 		2F89F04920A8F960003D80A8 /* Smart_DartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F04820A8F960003D80A8 /* Smart_DartsTests.swift */; };
 		2F89F05420A8F960003D80A8 /* Smart_DartsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F05320A8F960003D80A8 /* Smart_DartsUITests.swift */; };
+		2F89F06920A8F9B2003D80A8 /* GAEvolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F06520A8F9B1003D80A8 /* GAEvolver.swift */; };
+		2F89F06A20A8F9B2003D80A8 /* GAPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F06620A8F9B1003D80A8 /* GAPopulation.swift */; };
+		2F89F06B20A8F9B2003D80A8 /* GADna.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F06720A8F9B2003D80A8 /* GADna.swift */; };
+		2F89F06C20A8F9B2003D80A8 /* GAVector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F06820A8F9B2003D80A8 /* GAVector2D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		2F89F04F20A8F960003D80A8 /* Smart DartsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart DartsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F89F05320A8F960003D80A8 /* Smart_DartsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_DartsUITests.swift; sourceTree = "<group>"; };
 		2F89F05520A8F960003D80A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F89F06520A8F9B1003D80A8 /* GAEvolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAEvolver.swift; sourceTree = "<group>"; };
+		2F89F06620A8F9B1003D80A8 /* GAPopulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAPopulation.swift; sourceTree = "<group>"; };
+		2F89F06720A8F9B2003D80A8 /* GADna.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GADna.swift; sourceTree = "<group>"; };
+		2F89F06820A8F9B2003D80A8 /* GAVector2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAVector2D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +111,10 @@
 		2F89F02C20A8F95F003D80A8 /* Smart Darts */ = {
 			isa = PBXGroup;
 			children = (
+				2F89F06320A8F978003D80A8 /* Controller */,
+				2F89F06220A8F974003D80A8 /* View */,
+				2F89F06120A8F96C003D80A8 /* Model */,
 				2F89F02D20A8F95F003D80A8 /* AppDelegate.swift */,
-				2F89F02F20A8F95F003D80A8 /* GameScene.sks */,
-				2F89F03120A8F95F003D80A8 /* Actions.sks */,
-				2F89F03320A8F95F003D80A8 /* GameScene.swift */,
-				2F89F03520A8F95F003D80A8 /* GameViewController.swift */,
-				2F89F03720A8F95F003D80A8 /* Main.storyboard */,
 				2F89F03A20A8F960003D80A8 /* Assets.xcassets */,
 				2F89F03C20A8F960003D80A8 /* LaunchScreen.storyboard */,
 				2F89F03F20A8F960003D80A8 /* Info.plist */,
@@ -132,6 +138,44 @@
 				2F89F05520A8F960003D80A8 /* Info.plist */,
 			);
 			path = "Smart DartsUITests";
+			sourceTree = "<group>";
+		};
+		2F89F06120A8F96C003D80A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F89F06420A8F994003D80A8 /* Genetic Algorithm */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F89F06220A8F974003D80A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F89F02F20A8F95F003D80A8 /* GameScene.sks */,
+				2F89F03120A8F95F003D80A8 /* Actions.sks */,
+				2F89F03720A8F95F003D80A8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F89F06320A8F978003D80A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F89F03320A8F95F003D80A8 /* GameScene.swift */,
+				2F89F03520A8F95F003D80A8 /* GameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F89F06420A8F994003D80A8 /* Genetic Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				2F89F06720A8F9B2003D80A8 /* GADna.swift */,
+				2F89F06520A8F9B1003D80A8 /* GAEvolver.swift */,
+				2F89F06620A8F9B1003D80A8 /* GAPopulation.swift */,
+				2F89F06820A8F9B2003D80A8 /* GAVector2D.swift */,
+			);
+			path = "Genetic Algorithm";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +312,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F89F03420A8F95F003D80A8 /* GameScene.swift in Sources */,
+				2F89F06B20A8F9B2003D80A8 /* GADna.swift in Sources */,
+				2F89F06C20A8F9B2003D80A8 /* GAVector2D.swift in Sources */,
+				2F89F06920A8F9B2003D80A8 /* GAEvolver.swift in Sources */,
+				2F89F06A20A8F9B2003D80A8 /* GAPopulation.swift in Sources */,
 				2F89F03620A8F95F003D80A8 /* GameViewController.swift in Sources */,
 				2F89F02E20A8F95F003D80A8 /* AppDelegate.swift in Sources */,
 			);
