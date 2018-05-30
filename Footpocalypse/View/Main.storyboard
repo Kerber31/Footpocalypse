@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a3z-4M-FtD">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="aUk-jZ-Fwp">
+            <objects>
+                <viewController storyboardIdentifier="gameScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eLK-mJ-cRk" customClass="GameViewController" customModule="Footpocalypse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zoW-fX-hyC" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iu-uA-09B">
+                                <rect key="frame" x="20" y="301" width="63" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="storeButton"/>
+                                <connections>
+                                    <action selector="storeButtonTouchDown:" destination="eLK-mJ-cRk" eventType="touchUpInside" id="esB-M5-T15"/>
+                                    <action selector="storeButtonTouchDragExit:" destination="eLK-mJ-cRk" eventType="touchDragExit" id="q3G-Md-pas"/>
+                                    <action selector="storeButtonTouchUpInside:" destination="eLK-mJ-cRk" eventType="touchUpInside" id="7uU-zI-mZC"/>
+                                    <segue destination="f20-UA-dJ3" kind="show" identifier="storeSegue" id="nEv-BW-CGU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="QMX-WE-vJN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nlj-cn-wqG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tj0-Es-gne" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.43778110944538" y="16.800000000000001"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="0Mz-Zf-923">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Store" storyboardName="Store" bundleIdentifier="Store" referencedIdentifier="Store" id="f20-UA-dJ3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LE-js-YKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379" y="-170"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y8u-Bk-Lgn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a3z-4M-FtD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h03-a3-Ias">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eLK-mJ-cRk" kind="relationship" relationship="rootViewController" id="4OR-n7-0LP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycF-Fb-7n2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.733133433283363" y="16.800000000000001"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="storeButton" width="63" height="25"/>
+    </resources>
+</document>
